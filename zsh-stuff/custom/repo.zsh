@@ -8,7 +8,7 @@ _repo_comp() {
 }
 
 function repo() {
-  REPO_1="https://github.com/wolfgangcodes"
+  REPO_1="https://github.com/MY_REPO"
   # REPO_2="https://github.com/OTHER_REPO" #Just the root and forst segment of the https clone url
 
   if [ ! -d "$CODE_DIR/$1" ]; then
