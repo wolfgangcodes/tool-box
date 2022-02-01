@@ -3,5 +3,12 @@ alias gh_cleanup_merged="git fetch --prune && git branch --merged | grep -v '\*\
 alias gh_rebase="git rebase -i origin/main"
 
 gh_push() {
-  git push origin $(git branch --show-current)
+  branch=$(git branch --show-current)
+  if [[ $branch == 'master' || $branch == 'main' ]]; then
+    read -q "push_to_branch?Are you want to push to '$branch'? (Y/n)"
+    if [[ $push_to_branch != "y" ]]; then
+      return
+    fi
+  fi
+  git push origin $branch
 }
