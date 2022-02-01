@@ -1,0 +1,7 @@
+[core]
+	editor = code --wait
+[user]
+	name = Wolfgang Therrien
+	email = wolfgang.therrien@trajector.com
+[init]
+	defaultBranch = main
