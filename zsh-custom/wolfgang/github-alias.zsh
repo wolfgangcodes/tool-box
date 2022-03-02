@@ -10,5 +10,5 @@ gh_push() {
       return
     fi
   fi
-  git push origin $branch
+  git push origin $branch $@
 }
