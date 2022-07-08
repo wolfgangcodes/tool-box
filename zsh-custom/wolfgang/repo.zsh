@@ -9,13 +9,14 @@ _repo_comp() {
 
 function repo() {
   REPO_1="https://github.com/team-and-tech"
+  REPO_2="https://github.com/wolfgangcodes"
   # REPO_2="https://github.com/OTHER_REPO" #Just the root and first segment of the https clone url, no slash.
 
   if [ ! -d "$CODE_DIR/$1" ]; then
     echo Repo missing: $1
     cd $CODE_DIR
 
-    git clone "$REPO_1/$1.git" # || git clone "$REPO_2/$1.git"
+    git clone "$REPO_1/$1.git" || git clone "$REPO_2/$1.git"
   fi
 
   cd $CODE_DIR/$1
